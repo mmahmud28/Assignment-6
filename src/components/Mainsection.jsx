@@ -1,6 +1,7 @@
 import Cart from '../ui/cart';
 
-const MainSection = () => {
+const MainSection = ({modelData}) => {   
+    
     return (
         <div>
             <div className="flex flex-col items-center justify-center text-center py-[120px]">
@@ -21,7 +22,7 @@ const MainSection = () => {
                 </div>
             </div>
             <div>
-                <Cart/>
+                <Cart modelData={modelData}/>
             </div>
         </div>
     );

@@ -5,6 +5,13 @@ import Navbar from './components/Navbar'
 import Rating from './components/rating'
 import Steps from './components/Steps'
 
+const getData  = async () =>{
+  const res = fetch("/data.json");
+  return (await res).json();
+}
+
+const modelData = getData();
+
 function App() {
 
   return (
@@ -12,7 +19,7 @@ function App() {
     <Navbar/>
     <Banner/>
     <Rating/>
-    <MainSection/>
+    <MainSection modelData={modelData}/>
     <Steps/>
     </div>
   )
