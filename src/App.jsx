@@ -2,6 +2,7 @@ import './App.css'
 import Banner from './components/Banner'
 import MainSection from './components/Mainsection'
 import Navbar from './components/Navbar'
+import PrichingCart from './components/PrichingCart'
 import Rating from './components/rating'
 import Steps from './components/Steps'
 
@@ -21,6 +22,7 @@ function App() {
     <Rating/>
     <MainSection modelData={modelData}/>
     <Steps/>
+    <PrichingCart/>
     </div>
   )
 }
