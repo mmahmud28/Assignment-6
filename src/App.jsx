@@ -1,5 +1,6 @@
 import './App.css'
 import Banner from './components/Banner'
+import FooterButton from './components/FooterButton'
 import MainSection from './components/Mainsection'
 import Navbar from './components/Navbar'
 import PrichingCart from './components/PrichingCart'
@@ -23,6 +24,7 @@ function App() {
     <MainSection modelData={modelData}/>
     <Steps/>
     <PrichingCart/>
+    <FooterButton/>
     </div>
   )
 }

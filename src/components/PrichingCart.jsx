@@ -4,7 +4,7 @@ import PricgindCardDesign2 from '../ui/PriceingCardDesign2';
 
 const PrichingCart = () => {
     return (
-        <div className='container mx-auto space-y-10'>
+        <div className='container mx-auto space-y-15 my-8'>
             <div>
                 <h1 className='font-bold text-4xl text-center'>Simple, Transparent Pricing</h1>
                 <p className='text-center mt-3 text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
