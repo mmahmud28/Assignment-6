@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoMdCheckmark } from 'react-icons/io';
 
 const PricgindCardDesign2 = () => {
     return (
@@ -13,12 +14,30 @@ const PricgindCardDesign2 = () => {
                 </div>
                 <div className='flex items-center'><h1 className='text-3xl font-semibold'>$29</h1><p className=''>/month</p></div>
                 <ul className=''>
-                    <li>Access to 10 free tools</li>
-                    <li>Basic templates</li>
-                    <li>Community support</li>
-                    <li>1 project per month</li>
-                    <li>Cloud sync</li>
-                    <li>Advanced analytics</li>
+
+                     <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Access to 10 free tools</li>
+
+                     <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Basic templates</li>
+
+                     <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Community support</li>
+
+                     <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>1 project per month</li>
+
+                     <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Cloud sync</li>
+
+                     <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Advanced analytics</li>
                 </ul>
                 <button className='btn bg-white rounded-full w-full text-xl font-semibold'>Get Started Free</button>
             </div>
