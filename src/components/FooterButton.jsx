@@ -6,7 +6,7 @@ const FooterButton = () => {
     <div>
       <footer className="footer grid grid-cols-5 sm:footer-horizontal bg-[#101727] text-white p-10">
         <aside>
-          <p>
+          <p className="text-4xl font-bold">
             DigiTools
           </p>
           <p>Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.</p>
@@ -36,12 +36,25 @@ const FooterButton = () => {
         <nav>
           <h6 className="footer-title">Social Links</h6>
           <div className="flex gap-5">
-            <CiInstagram  className="w-9 h-9 p-1 bg-base-100 text-black rounded-full"/>
-            <FaFacebook className="w-9 h-9 p-1 bg-base-100 text-black rounded-full"/>
-            <FaTwitter className="w-9 h-9 p-1 bg-base-100 text-black rounded-full"/>
+            <CiInstagram className="w-9 h-9 p-1 bg-base-100 text-black rounded-full" />
+            <FaFacebook className="w-9 h-9 p-1 bg-base-100 text-black rounded-full" />
+            <FaTwitter className="w-9 h-9 p-1 bg-base-100 text-black rounded-full" />
           </div>
         </nav>
       </footer>
+
+      <div className="bg-[#101727] text-white p-10">
+        <div className="divider before:bg-white after:bg-white text-white"></div>
+        <div className="flex justify-between">
+          <div><small>© 2026 Digitools. All rights reserved.</small></div>
+          <ul className="flex gap-8 text-xs">
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li> Cookies</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -1,10 +1,11 @@
 import React from 'react';
 import { IoMdCloseCircle } from 'react-icons/io';
+import { IoBagHandle } from 'react-icons/io5';
+import { toast } from 'react-toastify';
 
 const CardItem = ({ cardAdd, setCard }) => {
 
     const totalPrice = cardAdd.reduce((sum, item) => sum + item.price, 0);
-    console.log(totalPrice);
 
     const removeCard = (id) => {
         const updatedCart = cardAdd.filter((itemcard) => itemcard.id !== id);
@@ -31,7 +32,12 @@ const CardItem = ({ cardAdd, setCard }) => {
                                             <p className='text-xl font-semibold text-emerald-900'>$ {data.price}</p>
                                         </div>
                                     </div>
-                                    <IoMdCloseCircle onClick={() => removeCard(data.id)} className='w-8 h-8 text-red-500' />
+                                    <IoMdCloseCircle
+                                        onClick={() => {
+                                            removeCard(data.id);
+                                            toast.error(data.name + " Item removed!");
+                                        }}
+                                        className='w-8 h-8 text-red-500' />
 
                                 </div>
                             </div>
@@ -41,11 +47,34 @@ const CardItem = ({ cardAdd, setCard }) => {
                     <p>Not an array</p>
                 )
             }
-            <div className='flex justify-between px-10'>
-                <h1 className='font-semibold'>Total:</h1>
-                <p className='text-xl font-bold'>$ {totalPrice}</p>
-            </div>
-            <button className='btn btn-primary w-full text-xl p-3'>Proceed to Checkout</button>
+            {cardAdd.length > 0 ? (
+                <div className='space-y-3'>
+                    <div className='flex justify-between px-10'>
+                        <h1 className='font-semibold'>Total:</h1>
+                        <p className='text-xl font-bold'>$ {totalPrice}</p>
+                    </div>
+
+                    <button
+                        onClick={() => {
+                            setCard([]);
+                            toast.success("Checkout successful!");
+                        }}
+                        className='btn btn-primary w-full text-xl p-3'
+                    >
+                        Proceed to Checkout
+                    </button>
+                </div>
+            ) : (
+                <div className="card bg-base-100 flex flex-col items-center justify-center text-center py-10 text-gray-500">
+
+                    <IoBagHandle className="text-6xl mb-3" />
+
+                    <h2 className="text-2xl text-red-500 font-bold">
+                        Your cart items is empty
+                    </h2>
+
+                </div>
+            )}
         </div>
     );
 };

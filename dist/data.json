@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Canva Pro",
+    "description": "Design stunning graphics with premium tools",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["1000+ templates", "Background remover", "Brand kit"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+  },
+  {
+    "id": 2,
+    "name": "ChatGPT Plus",
+    "description": "Advanced AI assistant for productivity",
+    "price": 20,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["GPT-4 access", "Fast response", "Priority support"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+  },
+  {
+    "id": 3,
+    "name": "Adobe Photoshop",
+    "description": "Professional image editing software",
+    "price": 25,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Layer editing", "AI tools", "Cloud sync"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+  },
+  {
+    "id": 4,
+    "name": "Netflix Premium",
+    "description": "Stream movies and TV shows in 4K",
+    "price": 15,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["4K streaming", "Multi-device", "Offline download"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/5977/5977590.png"
+  },
+  {
+    "id": 5,
+    "name": "Spotify Premium",
+    "description": "Ad-free music streaming service",
+    "price": 10,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["No ads", "Offline mode", "High quality audio"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/174/174872.png"
+  },
+  {
+    "id": 6,
+    "name": "Figma Pro",
+    "description": "Collaborative interface design tool",
+    "price": 15,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Live collaboration", "Design systems", "Cloud storage"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968704.png"
+  },
+  {
+    "id": 7,
+    "name": "Microsoft 365",
+    "description": "Office apps with cloud integration",
+    "price": 99,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Word, Excel, PowerPoint", "1TB OneDrive", "Multi-device"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/732/732221.png"
+  },
+  {
+    "id": 8,
+    "name": "Grammarly Premium",
+    "description": "AI writing assistant for better content",
+    "price": 12,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Grammar check", "Tone detection", "Plagiarism check"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968564.png"
+  },
+  {
+    "id": 9,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes easily",
+    "price": 29,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  }
+]

@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import PrichingCart from './components/PrichingCart'
 import Rating from './components/rating'
 import Steps from './components/Steps'
+import { ToastContainer } from 'react-toastify'
 
 const getData  = async () =>{
   const res = fetch("/data.json");
@@ -28,6 +29,7 @@ const [cardCount, setCardCount] = useState(0);
     <Steps/>
     <PrichingCart/>
     <FooterButton/>
+    <ToastContainer />
     </div>
   )
 }

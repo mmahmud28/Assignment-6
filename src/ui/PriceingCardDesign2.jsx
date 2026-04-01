@@ -11,7 +11,7 @@ const PricgindCardDesign2 = () => {
                     <h1 className='font-bold text-2xl'>Starter</h1>
                     <p className=''>Perfect for getting started</p>
                 </div>
-                <div className='flex'><h1>$0</h1><p className=''>/month</p></div>
+                <div className='flex items-center'><h1 className='text-3xl font-semibold'>$29</h1><p className=''>/month</p></div>
                 <ul className=''>
                     <li>Access to 10 free tools</li>
                     <li>Basic templates</li>

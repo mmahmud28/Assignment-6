@@ -1,18 +1,20 @@
 import { IoMdCheckmark } from 'react-icons/io';
+import { toast } from 'react-toastify';
 
-const ModelCard = ({myData, cardAdd, setCard}) => {
+const ModelCard = ({ myData, cardAdd, setCard }) => {
     const isBuy = cardAdd.some(item => item.id === myData.id);
 
-    const handleBuyButton = () =>{
-        setCard(preData=>{
-            const alRadyExists = preData.find(item=> item.id===myData.id);
+    const handleBuyButton = () => {
+        const alreadyExists = cardAdd.some(item => item.id === myData.id);
 
-            if(alRadyExists) return preData;
+        if (alreadyExists) {
+            toast.error("Already in cart!");
+            return;
+        }
 
-            return [...preData, myData]
-
-        })
-    }
+        setCard(prev => [...prev, myData]);
+        toast.success(`${myData.name} added to cart!`);
+    };
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-2xl p-3 space-y-4">
@@ -32,7 +34,7 @@ const ModelCard = ({myData, cardAdd, setCard}) => {
                 <h3 className="text-2xl font-bold">${myData.price}<span className="font-normal text-xl text-[#627382]">/{myData.period}</span></h3>
 
                 <ul className="space-y-2">
-                    {myData.features.map((features,key) => {
+                    {myData.features.map((features, key) => {
                         return (
                             <li key={key} className="flex items-center gap-2">
                                 <span>
