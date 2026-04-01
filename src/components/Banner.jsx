@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div className="w-full px-12 lg:px-24 flex justify-between items-center py-22">
             <div className="space-y-5">
-                
+
                 <ul className="inline-flex items-center bg-[#E1E7FF] rounded-full px-6 py-2 space-x-3">
 
                     <li className="relative w-6 h-6 shrink-0">
@@ -20,7 +20,9 @@ const Banner = () => {
                     </li>
                 </ul>
 
-                <h1 className="text-7xl font-bold">Supercharge Your <br /> Digital Workflow</h1>
+                <h1 className="text-7xl font-bold">Supercharge Your <br /> <span className="bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+                    Digital Workflow
+                </span></h1>
                 <p>Access premium AI tools, design assets, templates, and productivity <br />
                     software—all in one place. Start creating faster today. <br />
                     Explore Products

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner'
 import FooterButton from './components/FooterButton'
@@ -14,14 +15,16 @@ const getData  = async () =>{
 
 const modelData = getData();
 
-function App() {
 
+
+function App() {
+const [cardCount, setCardCount] = useState(0);
   return (
    <div>
-    <Navbar/>
+    <Navbar cardCount={cardCount}/>
     <Banner/>
     <Rating/>
-    <MainSection modelData={modelData}/>
+    <MainSection setCardCount={setCardCount} modelData={modelData} />
     <Steps/>
     <PrichingCart/>
     <FooterButton/>

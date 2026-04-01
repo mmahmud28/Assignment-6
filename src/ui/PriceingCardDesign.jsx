@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoMdCheckmark } from 'react-icons/io';
 
 const PricgindCardDesign = () => {
     return (
@@ -10,12 +11,24 @@ const PricgindCardDesign = () => {
                 </div>
                 <div className='flex'><h1>$0</h1><p className='text-[#627382]'>/month</p></div>
                 <ul className='text-[#627382]'>
-                    <li>Access to 10 free tools</li>
-                    <li>Basic templates</li>
-                    <li>Community support</li>
-                    <li>1 project per month</li>
+                    <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Access to 10 free tools</li>
+
+                    <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Basic templates</li>
+
+                    <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>Community support</li>
+
+                    <li className="flex items-center gap-2"><span>
+                        <IoMdCheckmark className="text-green-500 text-2xl" />
+                    </span>1 project per month</li>
+                
                 </ul>
-                <button className='btn btn-primary rounded-full w-full text-xl font-semibold'>Get Started Free</button>
+                <button className='btn btn-primary rounded-full w-full text-xl font-semibold mt-11'>Get Started Free</button>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import PricgindCardDesign from '../ui/PriceingCardDesign';
 import PricgindCardDesign2 from '../ui/PriceingCardDesign2';
+import PrichingCardDesign3 from '../ui/PrichingCardDesign3';
 
 const PrichingCart = () => {
     return (
@@ -16,6 +17,9 @@ const PrichingCart = () => {
                 </div>
                 <div>
                     <PricgindCardDesign2 />
+                </div>
+                <div>
+                    <PrichingCardDesign3 />
                 </div>
             </div>
         </div>

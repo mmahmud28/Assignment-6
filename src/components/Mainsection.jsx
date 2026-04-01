@@ -1,10 +1,22 @@
+import { useEffect, useState } from 'react';
 import Cart from '../ui/cart';
+import CardItem from './CardItem';
 
-const MainSection = ({modelData}) => {   
-    
+const MainSection = ({ modelData,setCardCount }) => {
+    const [activeTab, setActiveTab] = useState("products");
+    const [cardAdd, setCard] = useState([]);
+
+    let itemCount = cardAdd.length || 0;
+
+    useEffect(() => {
+        setCardCount(itemCount);
+    }, [cardAdd]);
+
+
+
     return (
         <div>
-            <div className="flex flex-col items-center justify-center text-center py-[120px]">
+            <div className="flex flex-col items-center justify-center text-center py-30">
                 <div>
                     <h3 className="text-4xl font-bold">Premium Digital Tools</h3>
                     <p className="mt-2 text-[#627382]">
@@ -13,16 +25,25 @@ const MainSection = ({modelData}) => {
                     </p>
                 </div>
                 <div className="mt-6 flex gap-4">
-                    <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-4xl px-6 py-5 text-lg">
-                        Products
-                    </a>
-                    <a className="btn rounded-4xl px-6 py-5 text-lg">
-                        Cart (2)
-                    </a>
+                    <div role="tablist" className="tabs tabs-box gap-1 p-2 shadow-2xl bg-gray-300 rounded-3xl">
+                        <a role="tab" onClick={() => setActiveTab("products")}
+                            className={`tab rounded-4xl font-bold ${activeTab === "products"
+                                ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"
+                                : ""
+                                }`}>Products</a>
+
+                        <a role="tab" onClick={() => setActiveTab("cart")}
+                            className={`tab rounded-4xl font-bold ${activeTab === "cart"
+                                ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"
+                                : ""
+                                }`}>Cart ({itemCount})</a>
+                    </div>
                 </div>
             </div>
             <div>
-                <Cart modelData={modelData}/>
+                {activeTab === "products" && <Cart modelData={modelData} cardAdd={cardAdd} setCard={setCard} />}
+                {activeTab === "cart" && <CardItem modelData={modelData} cardAdd={cardAdd} setCard={setCard} />}
+
             </div>
         </div>
     );

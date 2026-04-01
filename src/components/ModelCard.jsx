@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
 import { IoMdCheckmark } from 'react-icons/io';
 
-const ModelCard = ({myData}) => {
-    const [isbuy, setIsBuy] = useState(false);
+const ModelCard = ({myData, cardAdd, setCard}) => {
+    const isBuy = cardAdd.some(item => item.id === myData.id);
 
     const handleBuyButton = () =>{
-        setIsBuy(view => !view)
+        setCard(preData=>{
+            const alRadyExists = preData.find(item=> item.id===myData.id);
+
+            if(alRadyExists) return preData;
+
+            return [...preData, myData]
+
+        })
     }
     return (
         <div>
@@ -26,9 +32,9 @@ const ModelCard = ({myData}) => {
                 <h3 className="text-2xl font-bold">${myData.price}<span className="font-normal text-xl text-[#627382]">/{myData.period}</span></h3>
 
                 <ul className="space-y-2">
-                    {myData.features.map((features) => {
+                    {myData.features.map((features,key) => {
                         return (
-                            <li className="flex items-center gap-2">
+                            <li key={key} className="flex items-center gap-2">
                                 <span>
                                     <IoMdCheckmark className="text-green-500 text-2xl" />
                                 </span> {features}
@@ -36,7 +42,7 @@ const ModelCard = ({myData}) => {
                         )
                     })}
                 </ul>
-                <button onClick={handleBuyButton} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-white text-xl px-10 py-6">{isbuy ? "Alrady Buy" : "Buy Now"}</button>
+                <button onClick={handleBuyButton} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-white text-xl px-10 py-6"> {isBuy ? "Already Buy" : "Buy Now"}</button>
 
 
             </div>
